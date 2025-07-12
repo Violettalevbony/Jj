@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khuzaima😍😘</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+  body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #E6E6FA; /* lavender */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: #4b244a;
+  }
+  h1 {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .slide {
+    width: 90%;
+    max-width: 600px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem; /* lebih besar sedikit */
+    text-align: center;
+    margin-top: 20px;
+    transition: opacity 0.5s ease;
+  }
+  .controls {
+    margin-top: 20px;
+  }
+  button {
+    background: #d88cb0;
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    margin: 0 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background 0.3s;
+  }
+  button:hover {
+    background: #c76aa3;
+  }
+  audio {
+    display: none;
+  }
+</style>
+</head>
+<body>
+  <h1>TO THE MAN, I WANT TO SPEND MY WHOLE TIME WITH❤️</h1>
+  <div class="slide" id="slide"></div>
+  <div class="controls">
+    <button onclick="prevSlide()">⬅️ Prev</button>
+    <button onclick="nextSlide()">Next ➡️</button>
+  </div>
+  <audio src="https://voca.ro/1eVtYZR7aC8V" autoplay loop></audio>
+
+<script>
+let slides = [
+  'I still remember the very first time we met, how I fell in love with you and how everything happened unexpectedly.',
+  'We both didn’t expect, it was God who made it happen, because he knows we both need each other.',
+  'I`m beyond blessed and thankful that someone like you came into my life.',
+  'Thank you for making me realize and making me feel that I deserve to be loved, to be happy, and to have someone as amazing as you are.',
+  'Thank you for loving me and everything about me, thank you for accepting me, and all my flaws.',
+  'Don`t forget that I accept you as well just the way you are.',
+  'I pray to god to guide us always because you are the one I want to spend my whole life with.',
+  'I`m so lucky enough I have an ideal man that every girl dream of.',
+  'Thank you for coming into my life, for loving me unconditionally, for loving me who is mentally unstable, and for always holding my hands so tight that I know you will never ever let me go.',
+  'I just want you to know that I love you with every ounce of my being.',
+  'Lastly rest assured that you have me, my heart, and my soul, forever.',
+  'I love you Syed Khuzaima Ali😘❤️'
+];
+let currentIndex = 0;
+
+function updateSlide() {
+  const slideEl = document.getElementById('slide');
+  slideEl.style.opacity = 0;
+  setTimeout(() => {
+    slideEl.innerText = slides[currentIndex];
+    slideEl.style.opacity = 1;
+  }, 300);
+}
+
+function nextSlide() {
+  if (slides.length > 0) {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlide();
+  }
+}
+
+function prevSlide() {
+  if (slides.length > 0) {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlide();
+  }
+}
+
+// Tampilkan slide pertama saat halaman dimuat
+updateSlide();
+</script>
+</body>
+</html>
